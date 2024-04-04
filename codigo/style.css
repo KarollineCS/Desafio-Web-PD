@@ -1,1 +1,239 @@
+/*
+    PALETA DE CORES
+    ---MODO CLARO---
+    #BF7A26 (ocre queimado claro)
+    #A65E1F (ocre queimado escuro)
+    #BFA995 (beige)
+    #733D29 (marrom claro)
+    #0D0D0D (quase preto)
+
+    ---MODO ESCURO---
+    #0A0B0D (quase preto)
+    #593825 (marrom médio)
+    #8C5B3E (marrom claro)
+    #261610 (marrom escuro)
+    #A69D9C (cinza quente)
+
+*/
+
+* {
+    padding: 0;
+    font-size: 105%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #e2cdba;
+}
+
+/*CLASSES DE ESTILIZAÇÃO DO CABEÇALHO PRINCIPAL DA PÁGINA*/
+.cabecalho {
+    margin: 10px 13rem;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: #A65E1F;
+    color: rgb(238, 220, 197);
+    border-radius: 50px;
+    padding: 0px 6.25rem 0px 6.25rem;
+}
+
+.cabecalho ul li{
+    display: inline-block;
+    margin: 10px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/*CLASSES DE ESTILIZAÇÃO DO CARROSSEL E TÍTULO PRINCIPAL DA PÁGINA*/
+.carrossel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #BF7A26;
+}
+
+.principaltitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    font-size: 450%;
+    margin: 0;
+    color: #d3c1b0;
+    filter: drop-shadow(0px 0px 10px #0D0D0D);
+    text-transform: uppercase;
+}
+
+.slider {
+    filter: drop-shadow(0px 0px 10px #0D0D0D);
+    overflow: hidden;
+    width: 1250px;
+    height: 570px;
+    border-radius: 25px;
+}
+
+.container {
+    display: flex;
+    transition: 0.7s ease-in-out;
+    transform: translateX(0);
+}
+
+.container img {
+    object-fit: fill;
+    margin-top: -200px;
+    width: 1250px;
+    height: 945px;
+    opacity: 0.8;
+}
+
+/*CLASSES ASSOCIADAS AOS BENEFICIOS*/
+.beneficios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    flex-direction: column;
+    text-align: center;
+    font-size: 150%;
+}
+
+.beneficios h2 {
+    text-transform: uppercase;
+    margin: 0.5rem;
+}
+
+/*CLASSES RESPONSÁVEIS PELAS CURIOSIDADES*/
+.curiosidades {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #733D29;
+}
+
+.curiosidadetitle{
+    color: #0D0D0D;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 200%;
+    padding: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    background-color: #733D29;
+}
+
+.comp1, .comp2, .comp3, .comp4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.curiosidades p {
+    color: #0D0D0D;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: #BFA995;
+    border-radius: 5rem;
+    margin: 0.3rem 5rem;
+    padding: 10px;
+    text-align: center;
+    min-width: 3rem;
+    justify-content: center;
+}
+
+.curiosidades img{
+    filter: drop-shadow(0px 0px 10px #0D0D0D);
+    border-radius: 50%;
+    margin: 1.5rem;
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+/*CLASSES QUE FALAM SOBRE AS POSIÇÕES DO VOLEI*/
+.posicoes {
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+}
+
+.posicoes h2 {
+    grid-area: titulo;
+    text-align: center;
+    padding: 1.875rem 0px;
+    font-size: 1.875rem;
+}
+
+.posicoes img {
+    grid-area: imagem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.posicoes p {
+    grid-area: texto;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.25rem 1.875rem;
+    margin: auto;
+    justify-content: center;
+}
+
+.levantador {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    grid-template-areas: "imagem titulo"
+                         "imagem texto";
+}
+
+.oposto {
+    
+}
+
+
+
+
+.sobre {
+    display: flex;
+}
+
+.links {
+    display: flex;
+}
+
+.contato {
+    display: flex;
+}
+
+.logo-final {
+    display: flex;
+}
+
+.end {
+    display: flex;
+}
+
 
