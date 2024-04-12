@@ -4,133 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio PD</title>
+    <!--Folha de estilo-->
     <link rel="stylesheet" href="style.css">
+
+    <!--Fonte utilizada-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!--Folha de estilo da fonte-->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- O site inteiro será dividido em 3 divs (introdução, meio e fim) e um aside onde terá o conteúdo complementar -->
+    <!-- O site inteiro será dividido em 3 divs (introdução, meio e fim) e um footer onde terá o conteúdo complementar -->
     <section class="introduction">
         <!-- O header será utilizado para o cabeçalho da página -->
         <header class="cabecalho">
             <ul>
-                <li>Início</li>
-                <li>Benefícios</li>
-                <li>Entenda mais</li>
-                <li>Sobre nós</li>
+                <li><a href="#carrossel">Início</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#curiosidades">Competições</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
             </ul>
+            <!--Caixa de check para mudar o modo de cor da página-->
+            <input type="checkbox" id="toggle">
+            <label class="darkmode-toggle" for="toggle"></label>
         </header>
-        <!-- Div com o conteúdo que aparece assim que o usuário abre a página -->
-
-        <div class="carrossel">
+        <!-- Div com o conteúdo que aparece assim que o usuário abre a página e contém o material do carrossel-->
+        <div class="carrossel" id="carrossel">
             <h1 class="principaltitle">A set point for the future</h1>
             <div class="slider">
                 <div class="container">
-                    <img src="banco de imagens/carrossel/1.jpg" alt="">
-                    <img src="banco de imagens/carrossel/2.jpg" alt="">
-                    <img src="banco de imagens/carrossel/3.jpg" alt="">
-                    <img src="banco de imagens/carrossel/4.jpg" alt="">
-                    <img src="banco de imagens/carrossel/5.jpg" alt="">
-                    <img src="banco de imagens/carrossel/6.jpg" alt="">
+                    <img src="banco de imagens/carrossel/1.jpg" alt="Primeira imagem do carrossel, mostrando uma praia em um pôr do sol, com uma rede de voleibol posicionada.">
+                    <img src="banco de imagens/carrossel/2.jpg" alt="Segunda imagem do carrossel, mostra as costas de um jogador atento ao jogo de voleibol dentro de quadra e com a torcida no fundo.">
+                    <img src="banco de imagens/carrossel/3.jpg" alt="Terceira imagem do carrossel, mostra uma bola de voleibol de areia para na quadra de areia com pessoas treinando em fundo desfocado.">
+                    <img src="banco de imagens/carrossel/4.jpg" alt="Quarta imagem do carrossel, mostra um carrinho de compras com várias bolas de voleibol dentro e ao fundo pessoas treinando com um técnico dentro de um ginásio de voleibol.">
+                    <img src="banco de imagens/carrossel/5.jpg" alt="Quinta imagem do carrossel, mostra 3 meninas em posição de defesa dentro de quadra esperando a bola, com o resto do time ao fundo no banco de reservas.">
+                    <img src="banco de imagens/carrossel/6.jpg" alt="Sexta imagem do carrossel, mostra vários meninos treinando voleibol, onde alguns estão fazendo movimento de ataque em um ginásio de esportes.">
                 </div>
             </div>
         </div>
     </section>
     
     <div class="content">
-        <!--Sessão destinada a mostrar os benefícios do produto ofertado-->
-        <div class="beneficios">
+        <!--Sessão destinada a mostrar os benefícios do esporte-->
+        <div class="beneficios" id="beneficios">
             <h2>Benefícios do Esporte</h2>
             <p>Fortalece o corpo, estimula os membros superiores e inferiores, aumentando a flexibilidade e a coordenação motora. Melhora as capacidades cardiorrespiratórias. Auxilia na perda de peso, como todas as atividades físicas.</p>
         </div>
 
         <!--Sessão destinada para a navegação do usuário, onde ele poderá conhecer um pouco mais sobre o conteúdo-->
-        <h2 class="curiosidadetitle"><b>Competições</b></h2>
+        <h2 class="curiosidadetitle" id="curiosidades"><b>Competições</b></h2>
         <div class="curiosidades">
             <div class="comp1">
-                <img src="banco de imagens/superliga.jpg" alt="">
-                <p>Superliga</p>
+                <img src="banco de imagens/superliga.jpg" alt="Foto mostrando o campeão da última superliga feminina, onde as mulheres estão posando para a foto com o troféu e sua respectiva equipe técnica">
+                <p><a href="https://cbv.com.br/superliga/">Superliga</a></p>
             </div>
             <div class="comp2">
-                <img src="banco de imagens/mundial.jpg" alt="">
-                <p>Mundial</p>
+                <img src="banco de imagens/mundial.jpg" alt="Foto mostrando um jogador atacando uma bola em uma disputa oficial com a torcida ao fundo.">
+                <p><a href="https://en.volleyballworld.com/">Mundial</a></p>
             </div>
             <div class="comp3">
-                <img src="banco de imagens/olimpiadas.jpg" alt="">
-                <p>Olimpíadas</p>
+                <img src="banco de imagens/olimpiadas.jpg" alt="Jogadoras da seleção brasileira de vôlei comemorando um ponto feito nas olimpíadas de Tóquio.">
+                <p><a href="https://olympics.com/pt/paris-2024/esportes/volei">Olímpiadas</a></p>
             </div>
             <div class="comp4">
-                <img src="banco de imagens/praia.jpg" alt="">
-                <p>Praia</p>
+                <img src="banco de imagens/praia.jpg" alt="Foto mostrando um jogador de vôlei de praia recepcionando uma bola.">
+                <p><a href="http://rededoesporte.gov.br/pt-br/megaeventos/olimpiadas/modalidades/volei-de-praia">Praia</a></p>
             </div>
         </div>
 
-        <div class="posicoes">
+        <div class="posicoes" id="posicoes">
             <h2 class="posicoestitle">Conheça o Esporte</h2>
             <div class="levantador">
-                <img src="banco de imagens/lev.jpg" alt="">
+                <img src="banco de imagens/lev.jpg" alt="Jogadora de vôlei fazendo toque para outra jogadora com a torcida ao fundo.">
                 <h2>Levantador</h2>
                 <p>O levantador é aquele jogador responsável por armar os ataques. Ou seja, ele “levanta” ou passa a bola para o jogador que irá atacar na sequência. Seria o equivalente ao clássico camisa 10, no futebol, e ao armador, no basquete. Assim, é necessário que o levantador tenha boa visão de jogo e passes precisos, para que os ataques possam ser concluídos.</p>
             </div>
             <div class="oposto">
-                <h3>Oposto</h3>
+                <h2>Oposto</h2>
                 <p>Já o oposto é justamente o jogador que sempre atua na posição contrária a do levantador, em sua diagonal. Desta forma, é o principal atacante de um time, sendo uma boa opção também para vir do fundo da quadra e atacar antes mesmo da linha de três metros (que separa ataque e defesa).</p>
-                <img src="banco de imagens/oposto.jpg" alt="">
+                <img src="banco de imagens/oposto.jpg" alt="Foto mostrando garoto comemorando um ponto dentro de quadra com a torcida ao fundo.">
             </div>
             <div class="ponta">
-                <img src="banco de imagens/ponta.jpg" alt="">
-                <h3>Ponta</h3>
+                <img src="banco de imagens/ponta.jpg" alt="Foto mostrando um time de vôlei feminino jogando contra outro time, enquanto uma das jogadoras ataca a bola por cima da rede.">
+                <h2>Ponta</h2>
                 <p>Os jogadores de ponta, chamados também de ponteiros, ficam posicionados nas laterais da quadra. Eles atacam pela entrada e saída de rede, mas também têm a função de defender o ataque do time adversário, ajudando o líbero nos passes de defesa.</p>
             </div>
             <div class="central">
-                <h3>Central</h3>
+                <h2>Central</h2>
                 <p>O central costuma ser um dos atletas mais altos em um time de vôlei. Ele ataca pelo meio da rede e também é um dos principais encarregados do bloqueio. Além disso, o central é o principal responsável pelas chamadas bolas rápidas, que são lançadas pelo levantador com bastante velocidade e baixa altura. Na rotação, quando estiver posicionado no fundo de quadra, geralmente, é substituído pelo líbero.</p>
-                <img src="banco de imagens/central.jpg" alt="">
+                <img src="banco de imagens/central.jpg" alt="Foto mostrando um jogador atacando uma bola por cima da rede enquanto o outro jogador tenta bloquear a passagem da bola.">
             </div>
             <div class="libero">
-                <img src="banco de imagens/libero.jpg" alt="">
-                <h3>Líbero</h3>
+                <img src="banco de imagens/libero.jpg" alt="Foto mostrando a libero de um time incentivando o mesmo batendo palma, ela está em quadra junto com o resto do time.">
+                <h2>Líbero</h2>
                 <p>O líbero costuma ser o jogador mais baixo da equipe e tem função exclusivamente defensiva, não podendo sacar, atacar ou bloquear. Sua principal característica é a boa recepção de bola, defendendo o ataque do time oposto, além de poder se encarregar do levantamento quando o levantador não puder fazer o passe - por ter feito o primeiro do três toques ou se estiver longe da bola.</p>
             </div>
         </div>
 
         <!--sessão que falará sobre o time da unifei-->
-        <div class="sobre">
+        <div class="sobre" id="sobre">
             <h2>Pertinho de Você!</h2>
             <p>A equipe de vôlei universitário da Universidade Federal de Itajubá - Itabira é um time formado por mulheres estudantes de Engenharia e já conquistou diversos campeonatos! Participando em campeonatos fora da cidade de Itabira e contribuindo para o crescimento e visibilidade do esporte dentro da cidade. Além disso, possui atletas extremamente dedicadas e vencedoras. Você pode assistir aos jogos sempre que quiser, basta seguir a rede social abaixo e saber mais!</p>
-            <a href="">Saiba Mais</a>
+            <a href="https://www.instagram.com/voleifemininounifeiitabira?igsh=am8wcTV5YWNiODQ2">Saiba Mais</a>
         </div>
     </div>
 
     <!--Conteúdo complementar que ficará ao final da página para navegação do usuário-->
-    <aside class="complementary">
-        <div class="links">
-            <ul>
-                <li>Início</li>
-                <li>Benefícios</li>
-                <li>Competições e Modalidades</li>
-                <li>Sobre o Esporte</li>
-                <li><a href="">Instagram</a></li>
-                <li>Referencial</li>
-            </ul>
+    <footer class="footer-section">
+        <div class="container-footer">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="footer-content">
+                    <div class="row">
+                        <div class="col-md-4 mb-30">
+                            <div class="footer-logo">
+                                <img src="/banco de icons/volleyball-player.png" alt="" class="footer">
+                            </div>
+                            <div class="footer-text">
+                                <p>Ser bom não é apenas sobre atitude</p>
+                            </div>
+                        </div>
+                        <div class=" col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>LINKS</h3>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#carrossel">Início</a></li>
+                                <li><a href="#beneficios">Benefícios</a></li>
+                                <li><a href="#curiosidades">Competições e Modalidades</a></li>
+                                <li><a href="#posicoes">Sobre o Esporte</a></li>
+                                <li><a href="https://www.instagram.com/voleifemininounifeiitabira?igsh=am8wcTV5YWNiODQ2">Instagram</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>E-MAIL</h3>
+                                </div>
+                                <div class="footer-text mb-35">
+                                    <p>Receba atualizações sobre o vôlei gratuitamente</p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="email" placeholder="e-mail">
+                                        <button>
+                                            <img src="banco de icons/email-box.png" alt="">
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container-copy">
+                    <div class="col-lg-3,5">
+                        <div class="copyright-text">
+                            <p>Desenvolvido por Karolline Carvalho Silva estudante do Projeto Desenvolve Itabira - PDITA145 &COPY; 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="contato">
-            <p>Receba atualizações sobre o vôlei gratuitamente</p>
-            <form action="index.html" method="POST">
-                <input type="email" placeholder="e-mail" id="email">
-                <input type="submit" value="ok">
-            </form>
-        </div>
-        <div class="logo-final">
-            <img src="" alt="">
-            <p>Ser bom não é apenas sobre atitude</p>
-        </div>
-    </aside>
+    </footer>
 
-    <div class="end">
-        <!-- No footer será incluído os dados do desenvolvedor e a matricula de usuario-->
-        <footer>
-            <p>Desenvolvido por Karolline Carvalho Silva estudante do Projeto Desenvolve Itabira - PDITA145 &cop 2024</p>
-        </footer>
-    </div>
+    <!--Referencial ao javascript que traz o carrossel e o darkmode-->
     <script src="script.js"></script>
 </body>
 </html>
