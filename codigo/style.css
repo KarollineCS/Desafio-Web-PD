@@ -16,6 +16,52 @@
 
 */
 
+/*MEDIA QUERIES*/
+@media screen and (max-width: 768px){
+    html, body {
+        overflow-x: hidden;
+    }
+    /*SESSÃO DO CABEÇALHO ADAPTADA AO MEDIA QUERY*/
+    .cabecalho{
+        flex-direction: column;
+        padding: 1.563rem;
+        margin: 1.875rem;
+        width: auto;
+    }
+    .cabecalho ul {
+        padding: 0.5rem 0px;
+    }
+    .ul-list {
+        display: none;
+    }
+    .posicoes {
+        display: none;
+    }
+    .posicoes h2 {
+        grid-area: titulo;
+    }
+    .posicoes p {
+        grid-area: texto;
+    }
+    .posicoes img{
+        display: none;
+        width: 0;
+    }
+    .levantador, .oposto, .ponta, .central, .libero {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "titulo"
+                            "texto";
+    }
+    footer {
+        margin-top: 20px;
+    }
+    .footer {
+        padding-top: 15px
+    }
+
+}
+
 /*CONFIGURAÇÕES GERAIS*/
 * {
     padding: 0;
@@ -127,7 +173,7 @@ body.darkmode {
 
 /*CLASSES DE ESTILIZAÇÃO DO CABEÇALHO PRINCIPAL DA PÁGINA*/
 .cabecalho {
-    margin: 15px 13rem;
+    margin: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -141,17 +187,20 @@ body.darkmode {
     color: rgb(238, 220, 197);
 }
 
-.cabecalho ul li{
-    display: inline-block;
-    margin: 10px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+.cabecalho ul li a{
+    text-decoration: none;
+    font-size: 1.250rem;
+    transition: .3s ease;
 }
 
 .cabecalho ul li a:hover {
     color: #733D29;
     font-size: 1.375rem;
     transition: .3s ease;
+}
+
+.cabecalho img {
+    width: 5.625rem;
 }
 
 /*CLASSES DE ESTILIZAÇÃO DO CARROSSEL E TÍTULO PRINCIPAL DA PÁGINA*/
@@ -365,7 +414,7 @@ body.darkmode {
     align-items: center;
     text-align: center;
     padding-top: 3rem;
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
 }
 
 .sobre h2 {
@@ -404,23 +453,15 @@ body.darkmode {
 }
 
 /*CLASSES DE ESTILIZAÇÃO DO RODAPÉ DA PÁGINA*/
-.footer-section {
-    background: #0D0D0D;
-    position: relative;
-    margin-top: -3rem;
-}
-
 .container-footer {
     margin: 0px;
     padding: 5vh 5vh 0vh 5vh;
 }
 
-.pb-5 {
-    padding-bottom: 3rem !important;
-}
-
-.pt-5 {
-    padding-top: 3rem !important;
+.footer-section {
+    background: #0D0D0D;
+    position: relative;
+    margin-top: -3rem;
 }
 
 .footer-content {
@@ -429,31 +470,15 @@ body.darkmode {
 }
 
 .row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
     display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1* var(--bs-gutter-y));
-    margin-right: calc(-.5* var(--bs-gutter-x));
-    margin-left: calc(-.5* var(--bs-gutter-y));
-}
-
-.col-md-4 {
-    flex: 0 0 auto;
-    width: 33.33333333%;
-}
-
-.row>* {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x)* .5);
-    padding-left: calc(var(--bs-gutter-x)* .5);
-    margin-top: var(--bs-gutter-y);
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .footer-logo img {
     max-width: 150px;
+    margin-left: 50px;
 }
 
 .footer-text p {
@@ -461,16 +486,6 @@ body.darkmode {
     font-size: 1.111rem;
     color: #ececec;
     line-height: 1rem;
-}
-
-.col-xl-4 {
-    flex: 0 0 auto;
-    width: 33.333333%;
-}
-
-.col-lg-4 {
-    flex: 0 0 auto;
-    width: 33.333333%;
 }
 
 .footer-widget-heading h3 {
@@ -507,33 +522,9 @@ a:hover {
     color: #ececec;
 }
 
-.col-xl-2 {
-    flex: 0 0 auto;
-    width: 16.66666667%;
-}
-
-.subscribe-form {
-    position: relative;
-    overflow: hidden;
-}
-
-.subscribe-form input {
-    width: 100%;
-    padding: 14px 20px;
-    background: #2E2E2E;
-    border: 1px solid #2E2E2E;
-    color: #ececec;
-    border-radius: 30px;
-}
-
-.subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: #BF7A26;
-    padding: 0.555rem 0.555rem;
-    border: 0.111rem solid #BF7A26;
-    top: 0;
-    border-radius: 0px 30px 30px 0px;
+.copyright {
+    background: #0D0D0D;
+    padding: 5vh 0;
 }
 
 .container-copy{
